@@ -1,0 +1,127 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/05/2018  23:05:18  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj TO Interrupt_out RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  Interrupt_out (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     001FH     UNIT         ?PR?MAIN?MAIN
+            CODE    0025H     001EH     UNIT         ?PR?_DELAY?MAIN
+            CODE    0043H     000CH     UNIT         ?C_C51STARTUP
+            CODE    004FH     0007H     UNIT         ?PR?INT1INTL?MAIN
+            CODE    0056H     0004H     UNIT         ?PR?INT1?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   Interrupt_out (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?INT1INTL?MAIN
+  +--> ?PR?_DELAY?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  Interrupt_out (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/05/2018  23:05:18  PAGE 2
+
+
+  D:00A8H         PUBLIC        IE
+  C:0025H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  B:00B0H.7       PUBLIC        flag
+  B:00B0H.0       PUBLIC        s2
+  C:0006H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:004FH         PUBLIC        int1intl
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  C:0056H         PUBLIC        int1
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        z
+  -------         DO            
+  D:0006H         SYMBOL        x
+  D:0004H         SYMBOL        y
+  -------         ENDDO         
+  C:0025H         LINE#         7
+  C:0025H         LINE#         8
+  C:0025H         LINE#         11
+  C:002EH         LINE#         12
+  C:0042H         LINE#         13
+  -------         ENDPROC       _DELAY
+  -------         PROC          INT1INTL
+  C:004FH         LINE#         16
+  C:004FH         LINE#         17
+  C:004FH         LINE#         18
+  C:0051H         LINE#         19
+  C:0053H         LINE#         20
+  C:0055H         LINE#         22
+  -------         ENDPROC       INT1INTL
+  -------         PROC          INT1
+  C:0056H         LINE#         24
+  C:0056H         LINE#         26
+  C:0059H         LINE#         27
+  -------         ENDPROC       INT1
+  -------         PROC          MAIN
+  C:0006H         LINE#         29
+  C:0006H         LINE#         30
+  C:0006H         LINE#         31
+  C:0009H         LINE#         32
+  C:000CH         LINE#         33
+  C:000CH         LINE#         34
+  C:0013H         LINE#         35
+  C:0016H         LINE#         36
+  C:0016H         LINE#         37
+  C:0018H         LINE#         38
+  C:001AH         LINE#         39
+  C:0021H         LINE#         40
+  C:0024H         LINE#         41
+  C:0024H         LINE#         42
+  C:0024H         LINE#         43
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/05/2018  23:05:18  PAGE 3
+
+
+
+Program Size: data=9.0 xdata=0 code=90
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
